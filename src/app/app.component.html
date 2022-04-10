@@ -1,4 +1,5 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<form #f="ngForm" (submit)="updateData(f.value)">
+  <input type="text" ngModel name="username" />
+  <input type="text" ngModel name="city" />
+  <button type="submit">Update</button>
+</form>
