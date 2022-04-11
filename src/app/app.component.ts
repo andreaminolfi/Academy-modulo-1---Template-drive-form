@@ -18,10 +18,23 @@ export class AppComponent {
       username: 'guest',
       city: 'New York',
       role: 'guest',
+      phone: '+01 555 555',
+    };
+  }
+
+  showAdmin() {
+    this.user = {
+      username: 'admin',
+      city: 'London',
+      role: 'admin',
+      phone: '+02 555 777',
     };
   }
 
   updateData(formData: any) {
-    console.log(formData);
+    //console.log(formData);
+    //this.user = formData;
+    //this.user = { ...this.user, ...formData };
+    console.log(this.user);
   }
 }

@@ -1,5 +1,11 @@
+<button (click)="showGuest()">Show Guest</button>
+<button (click)="showAdmin()">Show Admin</button>
+
 <form #f="ngForm" (submit)="updateData(f.value)">
-  <input type="text" ngModel name="username" />
-  <input type="text" ngModel name="city" />
+  <input type="text" [(ngModel)]="user.username" name="username" />
+  <input type="text" [(ngModel)]="user.city" name="city" />
+  <input type="text" [(ngModel)]="user.phone" name="phone" />
   <button type="submit">Update</button>
 </form>
+<hr />
+<pre>{{ user | json }}</pre>
